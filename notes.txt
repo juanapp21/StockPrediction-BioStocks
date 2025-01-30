@@ -1,0 +1,24 @@
+
+
+Three accounts are created. 
+
+Yahoo Email : 
+email:    juanapp21@yahoo.com
+password: Fiverr123
+
+
+Streamlit Account
+email:    juanapp21@yahoo.com
+password: Fiverr123
+
+Github Account 
+email:    juanapp21@yahoo.com
+password:  Fiverr123!!x1d
+
+
+Url to project 
+https://stockprediction-biostocksgit-eojkpcdkpbvht9bwaehwdw.streamlit.app/
+
+You can access your source code from here : 
+https://github.com/juanapp21/StockPrediction-BioStocks/ 
+

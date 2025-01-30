@@ -137,6 +137,7 @@ def train_lstm(model,ticker, X, y, epochs=50, save_path='lstm_model.keras'):
     # Define the LSTM model
     # Fit the model
     model.fit(X, y, epochs=epochs, batch_size=32, validation_split=0.2, verbose=2, callbacks=[early_stop])
+    print("SAVING {}".format(save_path))
     model.save(save_path)
     return model
 
@@ -153,7 +154,7 @@ def train_lstm(model, X, y, epochs=50, save_path='lstm_model.keras'):
     return model
 
 def train_models():
-    symbols = ['NVAX']
+    symbols = ['NVAX','ATNM', 'IZO.CN', 'CYBCF','RIVN']
     current_date = datetime.now().strftime('%Y-%m-%d')
     prev_5_yrs_date = (datetime.now() - timedelta(days=10*365)).strftime('%Y-%m-%d')
 
@@ -173,7 +174,7 @@ def train_models():
     pred_step = 30
     for ticker in symbols: 
         save_path =  MODELS_PATH +  f'/month_{ticker}_lstm_model.keras'
-
+        
         features, targets = prepare_dataset(ticker, prev_5_yrs_date, current_date)
         X, y = create_dataset_multifeature(features, targets, time_step, pred_step)
         model = get_model()
